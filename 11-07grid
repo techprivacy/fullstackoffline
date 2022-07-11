@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.container{
+display: grid;
+grid-template-columns: auto auto auto auto;
+
+
+}
+.item1{
+grid-column: 1/5;
+background-color: lightblue;
+height: 40px;
+}
+.item2{
+grid-column: 1/5;
+background-color: lightcyan;
+height: 20px;
+}
+.item3{
+grid-column: 1/5;
+background-color: blanchedalmond;
+height: 100px;
+}
+.item4{
+grid-column: 1/4;
+background-color: lightgrey;
+height: 200px;
+}
+.item5{
+background-color: bisque;
+}
+.item6{
+grid-column: 1/5;
+background-color: lightseagreen;
+height: 20px;
+}
+.container > div{
+border:1px solid green;
+font-size: 20px;
+}    
+</style>
+
+</head>
+<body>
+<div class="container">
+<div class="item1">TOPBAR</div>
+<div class="item2">NAV</div>
+<div class="item3">SLIDER</div>
+<div class="item4">CONTENT</div>
+<div class="item5">SIDEBAR</div>
+<div class="item6">footer</div>
+
+</div>
+
+
+
+
+</body>
+</html>
