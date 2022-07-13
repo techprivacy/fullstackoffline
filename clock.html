@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Analog Clock</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    #hour,
+#minute,
+#second{
+background:red;
+position: absolute;
+transform-origin: bottom;
+}
+
+#hour{
+width:2%;
+height:25%;
+top:25%;
+left:49%;
+
+}
+#minute{
+    width:1.5%;
+    height:30%;
+    top:20%;
+    left:49.2%;
+    
+    }
+#second{
+        width:1%;
+        height:40%;
+        top:10%;
+        left:49.5%;
+        background:red;
+        
+   }
+</style>
+</head>
+<body>
+<h1>Analog Clock</h1>
+<div id="myclock" style="background:url(clock-bg.gif);height: 300px;width: 300px;background-size: cover;position: relative;">
+<div id="hour"></div>
+<div id="minute"></div>
+<div id="second"></div>
+
+</div>
+
+<script>
+
+    setInterval(() => {
+        clocktime = new Date();
+    hr= clocktime.getHours();
+    min = clocktime.getMinutes();
+    sec = clocktime.getSeconds();
+    
+    hr_rotation = 30 * hour + min / 2;
+    min_rotation = 6 * min;
+    sec_rotation = 6 * sec;
+
+    hour.style.transform =`rotate(${hr_rotation}deg)`;
+    minute.style.transform =`rotate(${min_rotation}deg)`;
+    second.style.transform =`rotate(${sec_rotation}deg)`;
+    }, 1000);
+    </script>
+
+<!-- <script src="script.js"></script> -->
+
+</body>
+
+
+</html>
